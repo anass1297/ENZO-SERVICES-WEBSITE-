@@ -1,5 +1,18 @@
 # React + TypeScript + Vite
 
+## Ebook lead form
+
+The ebook form sends leads to the Google Apps Script endpoint configured in
+`.env.production`. In Google Apps Script, deploy
+`google-apps-script/Code.gs` as a **Web app** with:
+
+- **Execute as:** Me
+- **Who has access:** Anyone
+
+After changing the deployment access, redeploy the web app and update the
+endpoint in `.env.production` if Google gives you a new deployment URL. Then
+rebuild and publish the site.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
