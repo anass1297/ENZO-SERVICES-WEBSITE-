@@ -1,6 +1,7 @@
 import { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import X from "./i18n.json";
 import logo from "./assets/Logo.png";
 import navbarLogo from "./assets/Logo-navbar.png";
@@ -170,5 +171,6 @@ export default function App(){
   </div>
  </div>}
  {ready&&chosen&&!ck&&<div role="dialog" aria-label="Cookies" className="fixed bottom-4 left-4 z-[90] w-[calc(100%-2rem)] max-w-sm rounded-2xl bg-white p-5 shadow-[0_20px_60px_rgba(14,11,29,.3)]" style={{animation:"pop .4s ease"}}><div className="flex gap-3 text-sm"><span className="text-xl">🍪</span><p style={{color:S}}>{t("ck")}</p></div><div className="mt-4 flex gap-2"><button onClick={()=>cookie("accepted")} className="flex-1 rounded-full py-2 text-sm font-semibold text-white" style={{background:`linear-gradient(135deg,${P},${N})`}}>{t("cka")}</button><button onClick={()=>cookie("declined")} className="flex-1 rounded-full border py-2 text-sm font-semibold" style={{borderColor:L,color:N}}>{t("ckd")}</button></div></div>}
+ <SpeedInsights />
  </div>
 }
